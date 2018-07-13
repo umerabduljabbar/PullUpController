@@ -320,6 +320,12 @@ extension UIViewController {
         }
     }
     
+    open func removePullUpController(_ pullUpController: PullUpController) {
+        pullUpController.willMove(toParentViewController: nil)
+        pullUpController.view.removeFromSuperview()
+        pullUpController.removeFromParentViewController()
+    }
+    
 }
 
 extension UIScrollView {
